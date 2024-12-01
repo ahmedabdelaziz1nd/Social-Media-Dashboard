@@ -1,0 +1,331 @@
+/* Dashboard.css */
+.dashboard {
+  display: grid;
+  grid-template-areas: 
+    "planning-tools planning-tools planning-tools"
+    "stats-chart main-chart general-stats"
+    "specific-analysis main-chart data-analysis"
+    "task-examples task-examples task-examples";
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center; /* جعل العناصر في المركز أفقيًا */
+  align-content: center; /* جعل العناصر في المركز رأسيًا */
+  width: 90vw; /* اجعل العرض 90% من عرض الشاشة */
+  max-width: 1200px; /* عرض أقصى للدف */
+  height: auto; /* اجعل الارتفاع تلقائيًا */
+  padding: 20px; /* إضافة بعض الحشو لتوفير مسافة داخلية */
+  margin: 20px auto; /* توسيط الدف الرئيسي */
+  box-sizing: border-box;
+  
+}
+.dashboard {
+  width: 100%;
+  height: 100vh; /* يجعل الدف كامل الارتفاع */
+  background: linear-gradient(135deg, #62d8bf, #08395ac7); /* تدرج الألوان كبداية */
+  transition: background 0.10s ease; /* تأثير التغيير التدريجي */
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px;
+  overflow-y: auto;
+}
+/* كود الخلفية للشاشة */
+body {
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(135deg, #01378dbe, #043044cb); /* الألوان المبدئية */
+  transition: background 0.3s ease; /* انتقال سلس للتغييرات */
+}
+html, body {
+  height: 100%; /* تأكد من أن ارتفاع الصفحة 100% */
+  margin: 0; /* إزالة الهوامش الافتراضية */
+  overflow-y: auto; /* تفعيل التمرير العمودي */
+}
+
+.dashboard-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #737c4af0;
+  border: 2px solid #ccc;
+  padding: 20px;
+  font-size: 20px;
+  width: 100%;
+  max-width: 100%; /* اجعل العرض 100% */
+  min-width: 150px;
+}
+
+/* دف التخطيط في الأعلى */
+.planning-tools {
+  grid-area: planning-tools;
+  height: 140px;
+  width: 600px; /* اجعل العرض 80% */
+  min-width: 200px; /* الحد الأدنى للعرض */
+  max-width: 500px; /* أقصى عرض */
+  margin: 0 auto; /* توسيط العنصر أفقيًا */
+  display: flex;
+  justify-content: center; /* توسيط النص داخل الدف */
+  align-items: center; /* توسيط النص عموديًا */
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+/* دف الرسم البياني على اليمين */
+.stats-chart {
+  grid-area: stats-chart;
+  height: 220px;
+  border-radius: 40px;
+  width: 70%; /* اجعل العرض 100% */
+  display: flex;
+  justify-content: center; /* توسيط النص داخل الدف */
+  align-items: center; /* توسيط النص عموديًا */
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* دف التحليلات المحددة أسفل دف الرسم */
+.specific-analysis {
+  grid-area: specific-analysis;
+  height: 220px;
+  border-radius: 40px;
+  width: 70%; /* اجعل العرض 100% */
+  display: flex;
+  justify-content: center; /* توسيط النص داخل الدف */
+  align-items: center; /* توسيط النص عموديًا */
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* دف الإحصائيات العامة على اليسار */
+.general-stats {
+  grid-area: general-stats;
+  height: 220px;
+  border-radius: 40px;
+  width: 90%; /* اجعل العرض 100% */
+  display: flex;
+  justify-content: center; /* توسيط النص داخل الدف */
+  align-items: center; /* توسيط النص عموديًا */
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* دف تحليل البيانات أسفل دف الإحصائيات */
+.data-analysis {
+  grid-area: data-analysis;
+  height: 220px;
+  border-radius: 40px;
+  width: 70%; /* اجعل العرض 100% */
+  display: flex;
+  justify-content: center; /* توسيط النص داخل الدف */
+  align-items: center; /* توسيط النص عموديًا */
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* الدف المركزي للمخطط */
+.main-chart {
+  grid-area: main-chart;
+  width: 60%; /* اجعل العرض 100% */
+  max-width: 800px;
+  height: 250px;
+  border-radius: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* دف المهام في الأسفل */
+.task-examples {
+  grid-area: task-examples;
+  height: 130px;
+  width: 60%; /* اجعل العرض 80% */
+  min-width: 200px; /* الحد الأدنى للعرض */
+  max-width: 500px; /* أقصى عرض */
+  margin: 0 auto; /* توسيط العنصر أفقيًا */
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center; /* توسيط النص داخل الدف */
+  align-items: center; /* توسيط النص عموديًا */
+  border-radius: 40px;
+}
+
+.sub-tools-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* توسيط المحتوى */
+  justify-content: center; /* توسيط عمودي */
+  height: 100vh; /* اجعل الصفحة تأخذ ارتفاع كامل الشاشة */
+  background-color: #633e2d71; /* خلفية فاتحة */
+  padding: 20px; /* إضافة حشوات */
+}
+
+.sub-tools-title {
+  margin-bottom: 20px; /* مسافة تحت العنوان */
+  font-size: 25px; /* حجم خط أكبر */
+  text-align: center; /* توسيط العنوان */
+}
+
+.sub-tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* عمودين */
+  grid-template-rows: repeat(2, 1fr); /* صفين */
+  gap: 30px; /* زيادة الفجوة بين الدفات */
+  width: 90vw; /* اجعل العرض 90% من عرض الشاشة */
+  max-width: 1200px; /* عرض أقصى للدف */
+  margin: 0 auto; /* توسيط الدف */
+}
+
+.sub-tool {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f4f4;
+  border: 1px solid #ccc;
+  padding: 20px;
+  font-size: 25px;
+  border-radius: 40px;
+  cursor: pointer; /* تغيير المؤشر عند التحويم */
+  height: 300px; /* تحديد ارتفاع ثابت للدفات الفرعية */
+  width: calc(150% - 400px); /* عرض كل دف 45% مع احتساب الفجوة */
+  max-width: 550px; /* أقصى عرض للدف */
+}
+
+button {
+  margin-top: 20px; /* مسافة أعلى الزر */
+  padding: 10px 20px; /* حشو للزر */
+  font-size: 25px; /* حجم النص */
+  cursor: pointer; /* تغيير المؤشر عند التحويم */
+  border-radius: 10px;
+  width: 200px;
+}
+/* إضافة نمط خلفية لـ h2 */
+.sub-tools-title {
+  background: linear-gradient(135deg, #84fab0, #8fd3f4); /* يمكنك تغيير الألوان حسب ما يتناسب مع تصميم المشروع */
+  padding: 10px; /* لإضافة مساحة حول النص */
+  border-radius: 8px; /* لجعل الزوايا مدورة */
+  text-align: center; /* محاذاة النص للوسط */
+}
+
+/* تغيير شكل المؤشر عند المرور على العنصر */
+.sub-tools-title:hover {
+  cursor: pointer; /* تغيير المؤشر إلى شكل يد عند التحويم */
+  opacity: 0.9; /* إضافة تأثير خفيف عند التحويم */
+}
+/* تعديل خلفية عنصر أدوات التخطيط والاستراتيجية إلى صورة */
+.planning-tools {
+  background-image: url('../components/img/group.jpg'); /* استبدل بهذا الرابط */
+  background-size: cover; /* لتغطية كامل العنصر */
+  background-position: center; /* لضبط الصورة في المركز */
+  color: rgb(248, 243, 243); /* لون النص */
+  padding: 15px; /* مسافة داخلية */
+  border-radius: 8px; /* زوايا مستديرة */
+  transition: background 0.3s ease; /* تأثير سلس عند التغيير */
+}
+
+/* تغيير لون الخلفية عند التحويم */
+.planning-tools:hover {
+  cursor: pointer; /* شكل اليد */
+  opacity: 0.9; /* خفض الشفافية قليلاً عند التحويم */
+}
+
+.dashboard-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e5f0ebb4;
+  border: 2px solid #ccc;
+  padding: 20px;
+  font-size: 25px;
+ /* width: 80%;*/
+  max-width: 100%; 
+  min-width: 150px;
+  transition: transform 0.3s ease, background-color 0.3s ease; /* تأثير انتقال سلس */
+}
+
+.dashboard-item:hover {
+  transform: perspective(700px) rotateY(10deg); /* تأثير دوران خفيف */
+  background-color: rgba(255, 255, 255, 0.8); /* لون خلفية عند التحويم */
+}
+.dashboard-item.task-examples {
+  background-image: url('../components/img/task.jpg'); /* استبدل هذا بالمسار الصحيح للصورة */
+  background-size: cover; /* لجعل الصورة تغطي الخلفية بالكامل */
+  background-position: center; /* لضبط موضع الصورة */
+  color: rgb(78, 5, 5); /* تغيير لون النص إذا لزم الأمر */
+  padding: 20px; /* إضافة padding لتحسين المظهر */
+  border-radius: 10px; /* إذا كنت ترغب في إضافة حواف دائرية */
+  transition: background-color 0.3s; /* تأثير سلس عند تغيير الخلفية */
+}
+
+/* إضافة تأثير عند المرور بالماوس */
+.dashboard-item.task-examples:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* لون خلفية عند المرور */
+}
+/* إضافة الخلفية الصورية مع اللون لكل دف */
+.specific-analysis {
+  background-image: url('../components/img/unnamed.jpg'), linear-gradient(to right, #737c4af0, #62d8bf);
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.general-stats {
+  background-image: url('../components/img/Provider.jpg'), linear-gradient(to right, #737c4af0, #62d8bf);
+  background-size: cover;
+  background-position: center;
+  color: rgb(0, 0, 0);
+}
+
+.data-analysis {
+  background-image: url('../components/img/que.jpg'), linear-gradient(to right, #737c4af0, #62d8bf);
+  background-size: cover;
+  background-position: center;
+  color: rgb(3, 3, 3);
+}
+.main-chart {
+  background-image: url('../components/img/TVSOVFuD2eL.jpg'), linear-gradient(to right, #737c4af0, #62d8bf);
+  background-size: cover;
+  background-position: center;
+  color: rgb(228, 228, 15);
+}
+.dashboard-item.stats-chart {
+  background-image: url('../components/img/SAtAV9d.jpg'); /* استبدل بالمسار الصحيح للصورة */
+  background-size: cover; /* يجعل الصورة تغطي كامل العنصر */
+  background-position: center; /* يركز الصورة في منتصف العنصر */
+  position: relative; /* يُستخدم إذا كنت بحاجة لتحديد عناصر داخل العنصر */
+  color: white; /* لتغيير لون النص إذا كان الخلفية داكنة */
+  padding: 20px; /* إضافة مساحة داخلية لجعل النص يظهر بشكل أفضل */
+  border-radius: 40px; /* لجعل الزوايا مدورة (اختياري) */
+}
+
+.dashboard-item {
+  cursor: pointer; /* يجعل شكل الماوس يتغير إلى اليد */
+}
+
+
+/* استعلامات وسيطة لتعديل التصميم على الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr; /* اجعل الأعمدة عمودية على الشاشات الصغيرة */
+    grid-template-areas: 
+      "planning-tools"
+      "stats-chart"
+      "main-chart"
+      "general-stats"
+      "specific-analysis"
+      "data-analysis"
+      "task-examples";
+  }
+  
+  .dashboard-item {
+    min-width: 100%; /* اجعل العرض 100% على الشاشات الصغيرة */
+  }
+}
